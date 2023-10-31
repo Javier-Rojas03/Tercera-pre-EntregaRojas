@@ -1,0 +1,26 @@
+
+{% extends "index.html" %}
+
+{% block title_head %}
+<title>Gorras</title>
+{% endblock title_head %}
+
+{% block h1_header %}
+Gorras
+{% endblock h1_header %}
+
+{% block main %}
+
+<ul>
+    {% for gorra in listado_gorras  %}
+    
+    <li>{{gorra}}</li>
+    
+    {% endfor %}
+</ul>
+<div class="text-center">
+
+<a class="btn btn-primary" href={% url "crear_gorra" %}>Crear</a>
+
+</div>
+{% endblock main %}

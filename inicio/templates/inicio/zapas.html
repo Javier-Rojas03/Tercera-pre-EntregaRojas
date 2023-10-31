@@ -1,0 +1,26 @@
+
+{% extends "index.html" %}
+
+{% block title_head %}
+<title>Zapas</title>
+{% endblock title_head %}
+
+{% block h1_header %}
+Zapas
+{% endblock h1_header %}
+
+{% block main %}
+
+<ul>
+    {% for zapatillas in listado_zapas  %}
+    
+    <li>{{zapatillas}}</li>
+    
+    {% endfor %}
+</ul>
+<div class="text-center">
+
+    <a class="btn btn-primary" href={% url "crear_zapatillas" %}>Crear</a>
+    
+</div>
+{% endblock main %}

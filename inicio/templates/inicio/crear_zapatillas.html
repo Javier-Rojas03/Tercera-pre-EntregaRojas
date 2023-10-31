@@ -1,0 +1,24 @@
+
+{% extends "index.html" %}
+
+{% block title_head %}
+<title>Creacion zapatillas</title>
+{% endblock title_head %}
+
+{% block h1_header %}
+Creacion de zapatillas
+{% endblock h1_header %}
+
+{% block main %}
+<div class="text-center">
+    
+    <form action="" method="POST">
+        {% csrf_token %}
+            <input type="text" name="marca" placeholder="marca">
+            <input type="text" name="color" placeholder="color">
+            <input type="text" name="modelo" placeholder="modelo">
+            <input type="number" name="stock" placeholder="stock">
+            <input type="submit" value="Crear">
+    </form>
+</div>
+{% endblock main %}

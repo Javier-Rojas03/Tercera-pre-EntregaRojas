@@ -1,0 +1,29 @@
+
+{% extends "index.html" %}
+
+{% block title_head %}
+<title>Remeras</title>
+{% endblock title_head %}
+
+{% block h1_header %}
+Remeras
+{% endblock h1_header %}
+
+{% block main %}
+<form action="">
+    <input type="text" name="marca" placeholder="introduzca una marca...">
+    <input type="submit" value="Buscar">
+</form>
+<ul>
+    {% for remera in listado_remeras  %}
+    
+    <li>{{remera}}</li>
+    
+    {% endfor %}
+</ul>
+<div class="text-center">
+
+    <a class="btn btn-primary" href={% url "crear_remera" %}>Crear</a>
+    
+</div>
+{% endblock main %}
